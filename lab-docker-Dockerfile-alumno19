@@ -1,0 +1,7 @@
+FROM python:3.11-slim
+
+COPY reduc-operation-array-par-alumno19.ipynb /app/
+
+RUN pip install jupyter numpy numba
+
+CMD ["ipython", "/app/reduc-operation-array-par-alumno19.ipynb", "100000", "1"]
